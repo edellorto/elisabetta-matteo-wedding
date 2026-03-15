@@ -1,0 +1,549 @@
+/* ============================================================================
+   ELISABETTA & MATTEO - MINIMAL WEDDING WEBSITE
+   Colori: Bianco/Panna + Verde Bottiglia di Champagne
+   ============================================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2d5016;        /* Verde bottiglia di champagne */
+    --bg-color: #faf8f3;             /* Bianco/Panna */
+    --text-color: #2d5016;           /* Verde bottiglia */
+    --white: #ffffff;
+    --light-bg: #f5f3ed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================================================
+   BOLLICINE DI SFONDO
+   ============================================================================ */
+
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background: radial-gradient(circle at 30% 30%, rgba(45, 80, 22, 0.1), rgba(45, 80, 22, 0.02));
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.bubble:nth-child(1) { width: 20px; height: 20px; top: 10%; left: 5%; }
+.bubble:nth-child(2) { width: 15px; height: 15px; top: 20%; left: 15%; }
+.bubble:nth-child(3) { width: 25px; height: 25px; top: 30%; right: 10%; }
+.bubble:nth-child(4) { width: 18px; height: 18px; top: 40%; left: 20%; }
+.bubble:nth-child(5) { width: 22px; height: 22px; top: 50%; right: 15%; }
+.bubble:nth-child(6) { width: 16px; height: 16px; top: 60%; left: 10%; }
+.bubble:nth-child(7) { width: 20px; height: 20px; top: 70%; right: 20%; }
+.bubble:nth-child(8) { width: 18px; height: 18px; top: 80%; left: 25%; }
+.bubble:nth-child(9) { width: 24px; height: 24px; top: 85%; right: 5%; }
+.bubble:nth-child(10) { width: 17px; height: 17px; top: 90%; left: 15%; }
+
+/* ============================================================================
+   MENU HAMBURGER
+   ============================================================================ */
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ============================================================================
+   SIDEBAR MENU
+   ============================================================================ */
+
+.sidebar-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 100px 30px 30px;
+    z-index: 999;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar-menu.active {
+    right: 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+}
+
+.sidebar-menu a:hover {
+    opacity: 0.8;
+}
+
+/* ============================================================================
+   MENU OVERLAY
+   ============================================================================ */
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ============================================================================
+   MAIN CONTENT
+   ============================================================================ */
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================================================
+   SECTIONS
+   ============================================================================ */
+
+.section {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+}
+
+.section:nth-child(even) {
+    background-color: var(--light-bg);
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero .date {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.hero .subtitle {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* ============================================================================
+   COUNTDOWN TIMER
+   ============================================================================ */
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 40px 0;
+    padding: 30px 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.countdown-label {
+    font-size: 12px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================================================
+   LA NOSTRA STORIA - SLIDER
+   ============================================================================ */
+
+.slider-container {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    opacity: 0.8;
+}
+
+/* ============================================================================
+   STORY TEXT
+   ============================================================================ */
+
+.story-text {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.story-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ============================================================================
+   LOCATION
+   ============================================================================ */
+
+.location-item {
+    background-color: var(--white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.location-item h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.location-name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.location-address {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.location-time {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    margin: 30px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-container h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* ============================================================================
+   LISTA NOZZE
+   ============================================================================ */
+
+#lista-nozze .container {
+    text-align: center;
+}
+
+#lista-nozze p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.registry-links {
+    margin: 30px 0;
+}
+
+.registry-note {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* ============================================================================
+   RSVP
+   ============================================================================ */
+
+.rsvp-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form-container iframe {
+    border-radius: 10px;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero .date {
+        font-size: 18px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 20px 15px;
+    }
+
+    .countdown-number {
+        font-size: 20px;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    .form-container iframe {
+        height: 600px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 56px;
+    }
+
+    .hero .date {
+        font-size: 28px;
+    }
+
+    .section h2 {
+        font-size: 36px;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 40px 30px;
+    }
+
+    .countdown-number {
+        font-size: 32px;
+    }
+}
