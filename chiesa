@@ -73,17 +73,17 @@
             <h2>Location</h2>
             
             <div class="location-item">
-                <h3>⛪ Cerimonia</h3>
+                <h3>Cerimonia</h3>
                 <p>Chiesa Parrocchiale di San Paolo Apostolo<br>
-                Brugherio, Milano<br>
+                Piazza Don Giuseppe Camagni 1, Brugherio, MB<br>
                 Ore 14:30</p>
                 <a href="https://www.google.com/maps/place/Chiesa+Parrocchiale+di+San+Paolo+Apostolo/@45.5444682,9.2966691,17z/data=!3m2!4b1!5s0x4786b821db8e386b:0x1cc9f610a04fc6f7!4m6!3m5!1s0x4786b821c10e72cd:0xe7746b5475a8fa43!8m2!3d45.5444682!4d9.299244!16s%2Fg%2F1th85_f5?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Google Maps</a>
             </div>
 
             <div class="location-item">
-                <h3>🍷 Ricevimento</h3>
-                <p>Bersi Serlini Cantina<br>
-                Franciacorta, Brescia<br>
+                <h3>Ricevimento</h3>
+                <p>Bersi Serlini Franciacorta<br>
+                Via Cereto 7, Provaglio d'Iseo, BS<br>
                 Dalle 17:00</p>
                 <a href="https://www.google.com/maps/place/Bersi+Serlini+Franciacorta/@45.6368141,10.0197856,17z/data=!3m1!4b1!4m6!3m5!1s0x478165bef8329e71:0xe84fbfd81f60c13b!8m2!3d45.6368141!4d10.0223605!16s%2Fg%2F1tdmcrhw?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">Google Maps</a>
             </div>
@@ -100,7 +100,7 @@
         </section>
 
         <!-- RSVP Section -->
-        <section id="rsvp" class="rsvp">
+        <section id="RSVP" class="rsvp">
             <h2>Conferma Partecipazione</h2>
             <p>Vi preghiamo di confermare la vostra partecipazione entro il 31 agosto 2026</p>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc..." title="RSVP Form"></iframe>
