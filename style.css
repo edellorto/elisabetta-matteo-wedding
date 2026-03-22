@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, div, button, input, textarea, select, la
 }
 .hero-quote p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #444;
     font-style: italic;
     line-height: 1.7;
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, div, button, input, textarea, select, la
 .hero-quote-author {
     display: block;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     font-style: normal;
     text-align: center;
@@ -205,7 +205,7 @@ main {
     color: #faf8f3;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -300,25 +300,25 @@ main {
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    padding: 40px 20px 60px;
+    padding: 40px 20px 80px;
     background-image: url('Foto_Sposi1.jpg?v=2');
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center top;
     position: relative;
 }
 
-/* Overlay gradiente: trasparente in alto (visi visibili), opaco in basso (testo leggibile) */
+/* Overlay: trasparente in alto (visi liberi), opaco in basso (testo leggibile) */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(250,248,243,0.05) 0%,
-        rgba(250,248,243,0.10) 35%,
-        rgba(250,248,243,0.75) 58%,
-        rgba(250,248,243,0.92) 75%,
-        rgba(250,248,243,0.97) 100%
+        rgba(250,248,243,0.0)  0%,
+        rgba(250,248,243,0.0)  40%,
+        rgba(250,248,243,0.80) 62%,
+        rgba(250,248,243,0.97) 78%,
+        rgba(250,248,243,0.99) 100%
     );
     z-index: 0;
 }
@@ -330,9 +330,10 @@ main {
 
 @media (max-width: 768px) {
     .hero {
+        background-size: cover;
         background-position: center top;
         justify-content: flex-end;
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
 }
 
@@ -400,7 +401,7 @@ main {
 
 .countdown-label {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10px;
+    font-size: 12px;
     color: #666;
     text-transform: uppercase;
     margin-top: 4px;
@@ -461,7 +462,7 @@ main {
 
 .story-text p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     line-height: 1.9;
     margin-bottom: 16px;
@@ -577,7 +578,7 @@ main {
 
 .location-tag {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #2d5016;
@@ -588,7 +589,7 @@ main {
 
 .location-item h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 22px;
     color: #2d5016;
     font-weight: bold;
     line-height: 1.4;
@@ -596,13 +597,13 @@ main {
 
 .location-details p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     line-height: 1.7;
 }
 
 .location-time {
-    font-size: 15px !important;
+    font-size: 17px !important;
     font-weight: bold;
     color: #2d5016 !important;
     margin-top: 6px;
@@ -643,7 +644,7 @@ main {
 
 .registry-intro {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     max-width: 600px;
     margin: 0 auto 36px;
@@ -694,7 +695,7 @@ main {
 
 .iban-label {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #999;
@@ -702,12 +703,12 @@ main {
 
 .iban-value {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 17px;
     color: #333;
 }
 
 .iban-code {
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
     color: #2d5016;
     font-weight: bold;
@@ -716,7 +717,7 @@ main {
 
 .registry-note {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #888;
     font-style: italic;
 }
@@ -737,7 +738,7 @@ main {
 
 .rsvp p {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     margin-bottom: 30px;
 }
@@ -770,7 +771,7 @@ main {
 
 .rsvp-aka {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 17px;
     color: #555;
     font-style: italic;
     margin: 0;
@@ -787,7 +788,7 @@ main {
 
 .rsvp-slogan {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 20px;
     color: #2d5016;
     font-style: italic;
     margin: 10px 0 0;
@@ -802,7 +803,7 @@ main {
     text-decoration: none;
     border-radius: 5px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
     border: none;
