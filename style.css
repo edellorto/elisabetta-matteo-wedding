@@ -175,14 +175,22 @@ main {
     right: 0;
 }
 
-/* Bottiglia decorativa — in basso a sinistra, SOTTO le voci */
+/* Bottiglia decorativa — immagine reale inclinata in basso a sinistra */
 .sidebar-bottle {
     position: absolute;
-    bottom: -60px;
-    left: -30px;
-    opacity: 0.30;
+    bottom: -40px;
+    left: -20px;
     pointer-events: none;
     z-index: 0;
+}
+
+.sidebar-bottle-img {
+    width: 200px;
+    opacity: 0.28;
+    transform: rotate(-35deg);
+    transform-origin: bottom left;
+    display: block;
+    filter: hue-rotate(90deg) saturate(0.6) brightness(1.1);
 }
 
 .sidebar-menu ul {
