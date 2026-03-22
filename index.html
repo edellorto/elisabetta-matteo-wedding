@@ -34,45 +34,184 @@
 
     <!-- Sidebar Menu -->
     <nav class="sidebar-menu" id="sidebarMenu">
-        <!-- Bottiglia champagne decorativa -->
+        <!-- Bottiglia champagne decorativa realistica -->
         <div class="sidebar-bottle">
-            <svg viewBox="0 0 160 420" xmlns="http://www.w3.org/2000/svg" width="140" height="370">
-                <!-- Schizzo bottiglia inclinata -->
-                <!-- Corpo bottiglia -->
-                <g transform="rotate(-18, 80, 210)">
-                    <!-- Collo -->
-                    <rect x="68" y="30" width="24" height="60" rx="4" fill="#2d5016" opacity="0.85"/>
-                    <!-- Foglia/capsula dorata -->
-                    <rect x="64" y="82" width="32" height="22" rx="3" fill="#c9a84c" opacity="0.9"/>
-                    <!-- Spalla -->
-                    <path d="M52,104 Q52,118 45,130 L45,290 Q45,310 80,316 Q115,310 115,290 L115,130 Q108,118 108,104 Z" fill="#2d5016" opacity="0.85"/>
-                    <!-- Riflesso bottiglia -->
-                    <path d="M56,120 Q54,180 54,250 L58,250 Q58,180 60,120 Z" fill="rgba(255,255,255,0.12)"/>
-                    <!-- Etichetta -->
-                    <rect x="52" y="160" width="56" height="80" rx="5" fill="#faf8f3" opacity="0.93"/>
-                    <text x="80" y="186" text-anchor="middle" font-family="'Times New Roman', serif" font-size="10" fill="#2d5016" font-weight="bold">Eli &amp; Teo</text>
-                    <line x1="57" y1="192" x2="103" y2="192" stroke="#2d5016" stroke-width="0.6" opacity="0.4"/>
-                    <text x="80" y="206" text-anchor="middle" font-family="'Times New Roman', serif" font-size="7.5" fill="#2d5016">26 Settembre</text>
-                    <text x="80" y="218" text-anchor="middle" font-family="'Times New Roman', serif" font-size="7.5" fill="#2d5016">2026</text>
-                    <rect x="52" y="160" width="56" height="80" rx="5" fill="none" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
-                    <!-- Base -->
-                    <path d="M45,290 Q45,316 80,320 Q115,316 115,290" fill="#1f3a0e" opacity="0.9"/>
-                    <!-- Tappo -->
-                    <rect x="72" y="12" width="16" height="20" rx="3" fill="#8B6914" opacity="0.9"/>
-                    <rect x="70" y="26" width="20" height="6" rx="2" fill="#c9a84c" opacity="0.9"/>
-                    <!-- Gabbietta -->
-                    <line x1="72" y1="32" x2="68" y2="88" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
-                    <line x1="88" y1="32" x2="92" y2="88" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
-                    <line x1="70" y1="55" x2="90" y2="55" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
-                    <line x1="69" y1="72" x2="91" y2="72" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
-                </g>
-                <!-- Schizzi champagne -->
-                <circle cx="118" cy="28" r="4" fill="#c9a84c" opacity="0.55"/>
-                <circle cx="130" cy="18" r="2.5" fill="#c9a84c" opacity="0.45"/>
-                <circle cx="108" cy="15" r="3" fill="#c9a84c" opacity="0.4"/>
-                <circle cx="140" cy="32" r="2" fill="#c9a84c" opacity="0.35"/>
-                <ellipse cx="125" cy="10" rx="5" ry="3" fill="#c9a84c" opacity="0.3" transform="rotate(-20,125,10)"/>
-                <circle cx="148" cy="22" r="3" fill="#c9a84c" opacity="0.3"/>
+            <svg viewBox="0 0 140 500" xmlns="http://www.w3.org/2000/svg" width="130" height="460">
+                <defs>
+                    <linearGradient id="bBody" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%"   stop-color="#061500"/>
+                        <stop offset="18%"  stop-color="#0f2803"/>
+                        <stop offset="38%"  stop-color="#1e5008"/>
+                        <stop offset="52%"  stop-color="#2d6e0d"/>
+                        <stop offset="62%"  stop-color="#245c0a"/>
+                        <stop offset="78%"  stop-color="#102400"/>
+                        <stop offset="100%" stop-color="#040e00"/>
+                    </linearGradient>
+                    <linearGradient id="bNeck" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%"   stop-color="#061500"/>
+                        <stop offset="25%"  stop-color="#122800"/>
+                        <stop offset="50%"  stop-color="#1e4a06"/>
+                        <stop offset="75%"  stop-color="#112200"/>
+                        <stop offset="100%" stop-color="#040e00"/>
+                    </linearGradient>
+                    <linearGradient id="bCap" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%"   stop-color="#7a5e10"/>
+                        <stop offset="35%"  stop-color="#c9a84c"/>
+                        <stop offset="55%"  stop-color="#f0d070"/>
+                        <stop offset="100%" stop-color="#8a6e18"/>
+                    </linearGradient>
+                    <radialGradient id="bLabel" cx="48%" cy="38%" r="65%">
+                        <stop offset="0%"   stop-color="#fefaf0"/>
+                        <stop offset="100%" stop-color="#ede0b8"/>
+                    </radialGradient>
+                    <filter id="bShadow">
+                        <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.45"/>
+                    </filter>
+                </defs>
+
+                <!-- Forma bottiglia Dom Perignon: collo lungo sottile, spalle curve, corpo largo -->
+                <!-- Definizione path corpo completo bottiglia -->
+
+                <!-- OMBRA -->
+                <ellipse cx="72" cy="488" rx="30" ry="6" fill="rgba(0,0,0,0.35)"/>
+
+                <!-- CORPO BOTTIGLIA - forma identica Dom Perignon -->
+                <!-- Base arrotondata -->
+                <path d="
+                    M 54,460
+                    Q 52,478 70,484 Q 72,485 72,485 Q 72,485 74,484 Q 92,478 90,460
+                    L 90,430 Q 90,424 72,422 Q 54,424 54,430 Z
+                " fill="#0a1c03"/>
+                <!-- Concavità fondo -->
+                <ellipse cx="72" cy="460" rx="14" ry="7" fill="#050e01" opacity="0.9"/>
+
+                <!-- Corpo principale - largo e panciuto -->
+                <path d="
+                    M 34,155
+                    Q 32,160 32,168
+                    L 32,420 Q 32,440 72,444 Q 112,440 112,420
+                    L 112,168 Q 112,160 110,155
+                    Q 105,140 72,138 Q 39,140 34,155 Z
+                " fill="url(#bBody)" filter="url(#bShadow)"/>
+
+                <!-- Spalla curva pronunciata - caratteristica Dom Perignon -->
+                <path d="
+                    M 57,88
+                    Q 44,100 36,120 Q 32,138 34,155 Q 39,140 72,138 Q 105,140 110,155
+                    Q 112,138 108,120 Q 100,100 87,88
+                    Q 80,82 72,80 Q 64,82 57,88 Z
+                " fill="url(#bBody)"/>
+
+                <!-- COLLO lungo e sottile -->
+                <path d="
+                    M 62,18
+                    Q 58,20 57,28
+                    L 57,88 Q 64,82 72,80 Q 80,82 87,88
+                    L 87,28 Q 86,20 82,18 Z
+                " fill="url(#bNeck)"/>
+
+                <!-- Riflessi vetro corpo -->
+                <path d="M 40,165 Q 38,260 38,380 Q 38,420 40,438 L 48,438 Q 46,420 46,380 Q 46,260 48,165 Z" fill="rgba(255,255,255,0.08)"/>
+                <path d="M 50,168 Q 49,280 49,400 L 53,400 Q 53,280 54,168 Z" fill="rgba(255,255,255,0.04)"/>
+                <!-- Ombra destra corpo -->
+                <path d="M 100,165 Q 106,270 106,400 Q 106,430 104,440 L 112,440 L 112,168 Z" fill="rgba(0,0,0,0.3)"/>
+
+                <!-- Riflesso collo -->
+                <path d="M 60,22 Q 58,50 58,76 L 63,76 Q 63,50 65,22 Z" fill="rgba(255,255,255,0.09)"/>
+
+                <!-- Anello base collo / bague -->
+                <rect x="55" y="82" width="34" height="8" rx="2" fill="#0a1c03"/>
+                <rect x="55" y="82" width="34" height="3" fill="rgba(80,160,40,0.15)"/>
+
+                <!-- Labbro bocca bottiglia -->
+                <rect x="63" y="10" width="18" height="10" rx="3" fill="#162e04"/>
+                <ellipse cx="72" cy="10" rx="9" ry="3" fill="#1e4206"/>
+                <!-- Bordo superiore bocca -->
+                <ellipse cx="72" cy="7"  rx="9" ry="2.5" fill="#245210"/>
+
+                <!-- CAPSULA foil dorata testurizzata -->
+                <path d="M 57,78 L 57,104 Q 57,114 72,117 Q 87,114 87,104 L 87,78 Z" fill="url(#bCap)"/>
+                <!-- Righe verticali capsula -->
+                <line x1="62" y1="78" x2="62" y2="116" stroke="#8a6e14" stroke-width="0.8" opacity="0.6"/>
+                <line x1="67" y1="78" x2="67" y2="117" stroke="#8a6e14" stroke-width="0.8" opacity="0.6"/>
+                <line x1="72" y1="78" x2="72" y2="117" stroke="#d4b840" stroke-width="0.6" opacity="0.3"/>
+                <line x1="77" y1="78" x2="77" y2="117" stroke="#8a6e14" stroke-width="0.8" opacity="0.6"/>
+                <line x1="82" y1="78" x2="82" y2="116" stroke="#8a6e14" stroke-width="0.8" opacity="0.6"/>
+                <!-- Banda superiore capsula -->
+                <rect x="57" y="78" width="30" height="5" rx="1" fill="#f0d060" opacity="0.75"/>
+                <!-- Bordo inferiore capsula -->
+                <ellipse cx="72" cy="116" rx="15" ry="3.5" fill="#b8972a" opacity="0.85"/>
+
+                <!-- TAPPO sughero -->
+                <rect x="65" y="0" width="14" height="12" rx="3" fill="#c8a87a"/>
+                <rect x="64" y="8"  width="16" height="4"  rx="2" fill="#a87840"/>
+                <line x1="68" y1="1" x2="68" y2="11" stroke="#9a6830" stroke-width="0.5" opacity="0.45"/>
+                <line x1="72" y1="1" x2="72" y2="11" stroke="#9a6830" stroke-width="0.5" opacity="0.45"/>
+                <line x1="76" y1="1" x2="76" y2="11" stroke="#9a6830" stroke-width="0.5" opacity="0.45"/>
+
+                <!-- GABBIETTA muselet -->
+                <line x1="67" y1="11" x2="60" y2="80" stroke="#c9a84c" stroke-width="1.1" opacity="0.85"/>
+                <line x1="77" y1="11" x2="84" y2="80" stroke="#c9a84c" stroke-width="1.1" opacity="0.85"/>
+                <line x1="61" y1="38" x2="83" y2="38" stroke="#c9a84c" stroke-width="1"   opacity="0.7"/>
+                <line x1="59" y1="58" x2="85" y2="58" stroke="#c9a84c" stroke-width="1"   opacity="0.7"/>
+                <ellipse cx="72" cy="11" rx="8" ry="2.5" fill="#d4af37" opacity="0.9"/>
+
+                <!-- ETICHETTA forma scudo Dom Perignon FEDELE -->
+                <!-- Scudo esterno -->
+                <path d="
+                    M 44,232 L 44,210
+                    Q 44,197 52,191 L 72,187 L 92,191
+                    Q 100,197 100,210 L 100,232
+                    L 100,330 Q 100,342 92,347 L 72,351 L 52,347
+                    Q 44,342 44,330 Z
+                " fill="url(#bLabel)"/>
+                <!-- Bordo oro esterno -->
+                <path d="
+                    M 44,232 L 44,210
+                    Q 44,197 52,191 L 72,187 L 92,191
+                    Q 100,197 100,210 L 100,232
+                    L 100,330 Q 100,342 92,347 L 72,351 L 52,347
+                    Q 44,342 44,330 Z
+                " fill="none" stroke="#c9a030" stroke-width="1.6"/>
+                <!-- Bordo oro interno -->
+                <path d="
+                    M 48,230 L 48,212
+                    Q 48,202 55,197 L 72,194 L 89,197
+                    Q 96,202 96,212 L 96,230
+                    L 96,328 Q 96,338 89,342 L 72,345 L 55,342
+                    Q 48,338 48,328 Z
+                " fill="none" stroke="#c9a030" stroke-width="0.7" opacity="0.65"/>
+
+                <!-- Stella 5 punte stile Dom Perignon -->
+                <polygon points="72,197 74.5,205 82,205 76.5,210 78.5,218 72,213.5 65.5,218 67.5,210 62,205 69.5,205" fill="#c9a030"/>
+                <polygon points="72,197 74.5,205 82,205 76.5,210 78.5,218 72,213.5 65.5,218 67.5,210 62,205 69.5,205" fill="none" stroke="#9a7820" stroke-width="0.5"/>
+
+                <!-- Linea decorativa sotto stella -->
+                <line x1="49" y1="221" x2="95" y2="221" stroke="#c9a030" stroke-width="0.8" opacity="0.65"/>
+
+                <!-- Testo piccolo arcuato sopra nome (DOM PERIGNON style) -->
+                <text x="72" y="235" text-anchor="middle" font-family="'Times New Roman', serif" font-size="5.5" fill="#6a5010" letter-spacing="2" opacity="0.85">✦ ✦ ✦ ✦ ✦</text>
+
+                <!-- Nome principale corsivo -->
+                <text x="72" y="256" text-anchor="middle" font-family="'Times New Roman', serif" font-size="15" fill="#1a0e00" font-weight="bold" font-style="italic">Eli &amp; Teo</text>
+
+                <!-- Linea separatrice -->
+                <line x1="50" y1="263" x2="94" y2="263" stroke="#c9a030" stroke-width="0.7" opacity="0.6"/>
+
+                <!-- Decorazione floreale -->
+                <text x="72" y="276" text-anchor="middle" font-family="'Times New Roman', serif" font-size="6.5" fill="#8a6820" letter-spacing="2" opacity="0.8">~ ~ ~</text>
+
+                <!-- Data -->
+                <text x="72" y="291" text-anchor="middle" font-family="'Times New Roman', serif" font-size="7.5" fill="#2a1e00" letter-spacing="1.5">26 Settembre</text>
+                <text x="72" y="306" text-anchor="middle" font-family="'Times New Roman', serif" font-size="10"  fill="#1a0e00" font-weight="bold" letter-spacing="3">2026</text>
+
+                <!-- Linea finale -->
+                <line x1="52" y1="314" x2="92" y2="314" stroke="#c9a030" stroke-width="0.6" opacity="0.5"/>
+                <text x="72" y="326" text-anchor="middle" font-family="'Times New Roman', serif" font-size="6" fill="#5a4010" letter-spacing="2" opacity="0.75">BRUT MILLÉSIMÉ</text>
+                <line x1="52" y1="331" x2="92" y2="331" stroke="#c9a030" stroke-width="0.5" opacity="0.4"/>
+
+                <!-- Riflesso finale corpo dx -->
+                <path d="M 104,170 Q 110,290 110,410 L 112,410 L 112,165 Z" fill="rgba(0,0,0,0.12)"/>
             </svg>
         </div>
         <ul>
@@ -196,7 +335,7 @@
             <h2>La nostra storia</h2>
             <div class="story-text">
                 <p>Davanti a un toast in Piazza Argentina, nel lontano marzo 2018, qualcosa di semplice prese forma.</p>
-                <p>Eli lo guardò con un sorriso appena accennato, di quelli che sanno già dove vogliono arrivare: «Ciao Citte… io vorrei conoscerti meglio. Più di un amico» Teo non rispose subito come nei film. Sorrise, con quella leggerezza un po' fuori tempo: «Ah, ok… che figo. Sai che in un anno ci sono 3.156 × 10⁷ secondi?».</p>
+                <p>Eli lo guardò con un sorriso appena accennato, di quelli che sanno già dove vogliono arrivare: «Ciao Citte, io vorrei conoscerti meglio. Più di un amico.» Teo non rispose subito come nei film. Sorrise, con quella leggerezza un po' fuori tempo: «Ah, ok che figo. Sai che in un anno ci sono 3.156 × 10⁷ secondi?».</p>
                 <p>Un numero buttato lì, sospeso tra il serio e il gioco, eppure bastò.<br>Eli, senza fare calcoli, cascò tra le sue braccia.</p>
             </div>
             <div class="story-photos">
@@ -281,17 +420,49 @@
             <div class="location-grid">
                 <div class="location-item">
                     <div class="location-icon">
-                        <!-- Chiesa stilizzata SVG -->
-                        <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="52" height="60">
-                            <rect x="5" y="28" width="50" height="38" fill="none" stroke="#2d5016" stroke-width="2"/>
-                            <polygon points="30,4 5,28 55,28" fill="none" stroke="#2d5016" stroke-width="2"/>
-                            <rect x="26" y="4" width="8" height="10" fill="none" stroke="#2d5016" stroke-width="1.5"/>
-                            <line x1="30" y1="0" x2="30" y2="14" stroke="#2d5016" stroke-width="1.8"/>
-                            <line x1="25" y1="6" x2="35" y2="6" stroke="#2d5016" stroke-width="1.8"/>
-                            <rect x="22" y="44" width="16" height="22" fill="none" stroke="#2d5016" stroke-width="1.5"/>
-                            <path d="M22,44 Q30,38 38,44" fill="none" stroke="#2d5016" stroke-width="1.5"/>
-                            <rect x="10" y="34" width="10" height="12" fill="none" stroke="#2d5016" stroke-width="1.2"/>
-                            <rect x="40" y="34" width="10" height="12" fill="none" stroke="#2d5016" stroke-width="1.2"/>
+                        <!-- Chiesa fedele all'immagine: campanile, rosone, croce, portale -->
+                        <svg viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg" width="90" height="98">
+                            <!-- Corpo principale chiesa -->
+                            <rect x="18" y="62" width="74" height="54" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <!-- Tetti laterali (ali) -->
+                            <polygon points="18,62 2,80 18,80" fill="none" stroke="#2d5016" stroke-width="1.8"/>
+                            <polygon points="92,62 108,80 92,80" fill="none" stroke="#2d5016" stroke-width="1.8"/>
+                            <!-- Campanile centrale -->
+                            <rect x="40" y="32" width="30" height="32" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <!-- Tetto campanile a punta -->
+                            <polygon points="55,10 36,32 74,32" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <!-- Fascia base campanile -->
+                            <rect x="36" y="60" width="38" height="4" fill="none" stroke="#2d5016" stroke-width="1.2"/>
+                            <!-- Croce in cima -->
+                            <line x1="55" y1="0" x2="55" y2="12" stroke="#2d5016" stroke-width="2.2"/>
+                            <line x1="49" y1="4" x2="61" y2="4" stroke="#2d5016" stroke-width="2.2"/>
+                            <!-- Rosone circolare nel campanile -->
+                            <circle cx="55" cy="47" r="9" fill="none" stroke="#2d5016" stroke-width="1.6"/>
+                            <circle cx="55" cy="47" r="4.5" fill="none" stroke="#2d5016" stroke-width="1.2"/>
+                            <!-- Raggi rosone -->
+                            <line x1="55" y1="38" x2="55" y2="41" stroke="#2d5016" stroke-width="1.1"/>
+                            <line x1="55" y1="53" x2="55" y2="56" stroke="#2d5016" stroke-width="1.1"/>
+                            <line x1="46" y1="47" x2="49" y2="47" stroke="#2d5016" stroke-width="1.1"/>
+                            <line x1="61" y1="47" x2="64" y2="47" stroke="#2d5016" stroke-width="1.1"/>
+                            <line x1="48.5" y1="40.5" x2="50.7" y2="42.7" stroke="#2d5016" stroke-width="1"/>
+                            <line x1="59.3" y1="51.3" x2="61.5" y2="53.5" stroke="#2d5016" stroke-width="1"/>
+                            <line x1="61.5" y1="40.5" x2="59.3" y2="42.7" stroke="#2d5016" stroke-width="1"/>
+                            <line x1="50.7" y1="51.3" x2="48.5" y2="53.5" stroke="#2d5016" stroke-width="1"/>
+                            <!-- Portale centrale ad arco con croce -->
+                            <path d="M44,116 L44,88 Q44,80 55,80 Q66,80 66,88 L66,116 Z" fill="none" stroke="#2d5016" stroke-width="1.8"/>
+                            <!-- Croce nel portale -->
+                            <line x1="55" y1="84" x2="55" y2="108" stroke="#2d5016" stroke-width="1.4"/>
+                            <line x1="48" y1="93" x2="62" y2="93" stroke="#2d5016" stroke-width="1.4"/>
+                            <!-- Finestre laterali sx con figure -->
+                            <rect x="22" y="75" width="16" height="22" rx="2" fill="none" stroke="#2d5016" stroke-width="1.4"/>
+                            <!-- Figura sinistra -->
+                            <circle cx="30" cy="80" r="3" fill="none" stroke="#2d5016" stroke-width="1.1"/>
+                            <path d="M26,84 Q30,90 34,84" fill="none" stroke="#2d5016" stroke-width="1.1"/>
+                            <!-- Finestre laterali dx con figure -->
+                            <rect x="72" y="75" width="16" height="22" rx="2" fill="none" stroke="#2d5016" stroke-width="1.4"/>
+                            <!-- Figura destra -->
+                            <circle cx="80" cy="80" r="3" fill="none" stroke="#2d5016" stroke-width="1.1"/>
+                            <path d="M76,84 Q80,90 84,84" fill="none" stroke="#2d5016" stroke-width="1.1"/>
                         </svg>
                     </div>
                     <div class="location-tag">Cerimonia</div>
@@ -410,7 +581,7 @@
                         <span class="iban-value">Regalo nozze EliTeo (Nome del mittente)</span>
                     </div>
                 </div>
-                <p class="registry-note">Per qualsiasi domanda scriveteci tramite il modulo di conferma 💚</p>
+                <p class="registry-note">Per qualsiasi domanda, scriveteci tramite il modulo di conferma</p>
             </div>
         </section>
 
@@ -461,10 +632,9 @@
         <!-- RSVP Section -->
         <section id="rsvp" class="rsvp">
             <h2>Ci Sarai?</h2>
-            <p class="rsvp-subtitle">RSVP</p>
             <p>Vi preghiamo di confermare la vostra partecipazione entro il <strong>5 settembre 2026</strong></p>
-            <!-- Google Form RSVP -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSbS-p6_9yFn-WmZgjH7otbLdoBrWzRb05O3tWbp7UGI401A/viewform?embedded=true" title="RSVP Form" loading="lazy"></iframe>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSbS-p6_9yFn-WmZgjH7otbLdoBrWzRb05O3tWbp7UGI401A/viewform?usp=dialog" target="_blank" class="btn-rsvp">RSVP</a>
+        </section>
         </section>
 
     </main>
