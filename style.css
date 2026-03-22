@@ -301,7 +301,7 @@ main {
     align-items: center;
     text-align: center;
     padding: 40px 20px 60px;
-    background-image: url('Foto_Sposi1.jpg');
+    background-image: url('Foto_Sposi1.jpg?v=2');
     background-size: cover;
     background-position: center 12%;
     position: relative;
