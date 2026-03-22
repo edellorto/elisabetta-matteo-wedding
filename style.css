@@ -168,19 +168,33 @@ main {
     padding: 80px 30px 30px;
     transition: right 0.3s ease;
     z-index: 999;
+    overflow: hidden;
 }
 
 .sidebar-menu.active {
     right: 0;
 }
 
+/* Bottiglia decorativa in fondo al menu */
+.sidebar-bottle {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.28;
+    pointer-events: none;
+    z-index: 0;
+}
+
 .sidebar-menu ul {
     list-style: none;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .sidebar-menu li {
-    margin: 28px 0;
+    margin: 20px 0;
     text-align: center;
 }
 
