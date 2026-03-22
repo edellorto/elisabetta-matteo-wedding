@@ -300,28 +300,43 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px 60px;
     background-image: url('Foto_Sposi.jpeg');
     background-size: cover;
-    background-position: center top;
+    background-position: center 15%;
     position: relative;
 }
 
-/* Overlay scuro per leggibilità testo */
+/* Overlay gradiente: trasparente in alto (visi visibili), opaco in basso (testo leggibile) */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(250, 248, 243, 0.72);
+    background: linear-gradient(
+        to bottom,
+        rgba(250,248,243,0.05) 0%,
+        rgba(250,248,243,0.10) 35%,
+        rgba(250,248,243,0.75) 58%,
+        rgba(250,248,243,0.92) 75%,
+        rgba(250,248,243,0.97) 100%
+    );
     z-index: 0;
 }
 
 .hero > * {
     position: relative;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-position: center 10%;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+    }
 }
 
 .hero h1 {
