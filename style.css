@@ -175,13 +175,12 @@ main {
     right: 0;
 }
 
-/* Bottiglia decorativa in fondo al menu */
+/* Bottiglia decorativa — in basso a sinistra, SOTTO le voci */
 .sidebar-bottle {
     position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.28;
+    bottom: -60px;
+    left: -30px;
+    opacity: 0.30;
     pointer-events: none;
     z-index: 0;
 }
@@ -190,7 +189,7 @@ main {
     list-style: none;
     padding: 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidebar-menu li {
@@ -210,10 +209,66 @@ main {
     display: block;
     text-align: center;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .sidebar-menu a:hover {
     color: #d4af37;
+}
+
+/* ===== RSVP BUTTON ===== */
+.btn-rsvp {
+    display: inline-block;
+    padding: 16px 52px;
+    background-color: #2d5016;
+    color: #faf8f3;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+    border: 2px solid #2d5016;
+    box-shadow: 0 4px 14px rgba(45,80,22,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-rsvp::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.btn-rsvp:hover {
+    background-color: #1f3610;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(45,80,22,0.4);
+    border-color: #1f3610;
+}
+
+.btn-rsvp:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 2px 6px rgba(45,80,22,0.2);
+    background-color: #162c0a;
+}
+
+.btn-rsvp:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
 }
 
 /* ===== OVERLAY ===== */
@@ -673,14 +728,45 @@ main {
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
     border: none;
     cursor: pointer;
     margin-top: 6px;
+    box-shadow: 0 3px 8px rgba(45,80,22,0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-maps::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
 }
 
 .btn-maps:hover {
     background-color: #1f3610;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(45,80,22,0.35);
+}
+
+.btn-maps:active {
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 1px 4px rgba(45,80,22,0.2);
+    background-color: #162c0a;
+}
+
+.btn-maps:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
 }
 
 /* ===== RESPONSIVE ===== */
