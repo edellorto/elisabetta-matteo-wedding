@@ -34,6 +34,47 @@
 
     <!-- Sidebar Menu -->
     <nav class="sidebar-menu" id="sidebarMenu">
+        <!-- Bottiglia champagne decorativa -->
+        <div class="sidebar-bottle">
+            <svg viewBox="0 0 160 420" xmlns="http://www.w3.org/2000/svg" width="140" height="370">
+                <!-- Schizzo bottiglia inclinata -->
+                <!-- Corpo bottiglia -->
+                <g transform="rotate(-18, 80, 210)">
+                    <!-- Collo -->
+                    <rect x="68" y="30" width="24" height="60" rx="4" fill="#2d5016" opacity="0.85"/>
+                    <!-- Foglia/capsula dorata -->
+                    <rect x="64" y="82" width="32" height="22" rx="3" fill="#c9a84c" opacity="0.9"/>
+                    <!-- Spalla -->
+                    <path d="M52,104 Q52,118 45,130 L45,290 Q45,310 80,316 Q115,310 115,290 L115,130 Q108,118 108,104 Z" fill="#2d5016" opacity="0.85"/>
+                    <!-- Riflesso bottiglia -->
+                    <path d="M56,120 Q54,180 54,250 L58,250 Q58,180 60,120 Z" fill="rgba(255,255,255,0.12)"/>
+                    <!-- Etichetta -->
+                    <rect x="52" y="160" width="56" height="80" rx="5" fill="#faf8f3" opacity="0.93"/>
+                    <text x="80" y="186" text-anchor="middle" font-family="'Times New Roman', serif" font-size="10" fill="#2d5016" font-weight="bold">Eli &amp; Teo</text>
+                    <line x1="57" y1="192" x2="103" y2="192" stroke="#2d5016" stroke-width="0.6" opacity="0.4"/>
+                    <text x="80" y="206" text-anchor="middle" font-family="'Times New Roman', serif" font-size="7.5" fill="#2d5016">26 Settembre</text>
+                    <text x="80" y="218" text-anchor="middle" font-family="'Times New Roman', serif" font-size="7.5" fill="#2d5016">2026</text>
+                    <rect x="52" y="160" width="56" height="80" rx="5" fill="none" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
+                    <!-- Base -->
+                    <path d="M45,290 Q45,316 80,320 Q115,316 115,290" fill="#1f3a0e" opacity="0.9"/>
+                    <!-- Tappo -->
+                    <rect x="72" y="12" width="16" height="20" rx="3" fill="#8B6914" opacity="0.9"/>
+                    <rect x="70" y="26" width="20" height="6" rx="2" fill="#c9a84c" opacity="0.9"/>
+                    <!-- Gabbietta -->
+                    <line x1="72" y1="32" x2="68" y2="88" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+                    <line x1="88" y1="32" x2="92" y2="88" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+                    <line x1="70" y1="55" x2="90" y2="55" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+                    <line x1="69" y1="72" x2="91" y2="72" stroke="#c9a84c" stroke-width="0.8" opacity="0.7"/>
+                </g>
+                <!-- Schizzi champagne -->
+                <circle cx="118" cy="28" r="4" fill="#c9a84c" opacity="0.55"/>
+                <circle cx="130" cy="18" r="2.5" fill="#c9a84c" opacity="0.45"/>
+                <circle cx="108" cy="15" r="3" fill="#c9a84c" opacity="0.4"/>
+                <circle cx="140" cy="32" r="2" fill="#c9a84c" opacity="0.35"/>
+                <ellipse cx="125" cy="10" rx="5" ry="3" fill="#c9a84c" opacity="0.3" transform="rotate(-20,125,10)"/>
+                <circle cx="148" cy="22" r="3" fill="#c9a84c" opacity="0.3"/>
+            </svg>
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li class="menu-bubbles"><span></span><span></span><span></span><span></span><span></span></li>
@@ -155,7 +196,7 @@
             <h2>La nostra storia</h2>
             <div class="story-text">
                 <p>Davanti a un toast in Piazza Argentina, nel lontano marzo 2018, qualcosa di semplice prese forma.</p>
-                <p>Eli lo guardò con un sorriso appena accennato, di quelli che sanno già dove vogliono arrivare: <em>«Ciao Citte… io vorrei conoscerti meglio. Più di un amico»</em> Teo non rispose subito come nei film. Sorrise, con quella leggerezza un po' fuori tempo: <em>«Ah, ok… che figo. Sai che in un anno ci sono 3.156 × 10⁷ secondi?»</em>.</p>
+                <p>Eli lo guardò con un sorriso appena accennato, di quelli che sanno già dove vogliono arrivare: «Ciao Citte… io vorrei conoscerti meglio. Più di un amico» Teo non rispose subito come nei film. Sorrise, con quella leggerezza un po' fuori tempo: «Ah, ok… che figo. Sai che in un anno ci sono 3.156 × 10⁷ secondi?».</p>
                 <p>Un numero buttato lì, sospeso tra il serio e il gioco, eppure bastò.<br>Eli, senza fare calcoli, cascò tra le sue braccia.</p>
             </div>
             <div class="story-photos">
@@ -422,11 +463,8 @@
             <h2>Ci Sarai?</h2>
             <p class="rsvp-subtitle">RSVP</p>
             <p>Vi preghiamo di confermare la vostra partecipazione entro il <strong>5 settembre 2026</strong></p>
-            <!-- Sostituisci l'URL qui sotto con il tuo link Google Form -->
-            <!-- <iframe src="https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true" title="RSVP Form" loading="lazy"></iframe> -->
-            <div class="rsvp-placeholder">
-                <p>📋 Il modulo di conferma sarà disponibile a breve</p>
-            </div>
+            <!-- Google Form RSVP -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSbS-p6_9yFn-WmZgjH7otbLdoBrWzRb05O3tWbp7UGI401A/viewform?embedded=true" title="RSVP Form" loading="lazy"></iframe>
         </section>
 
     </main>
