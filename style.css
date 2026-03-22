@@ -109,14 +109,8 @@ main {
     cursor: pointer;
     z-index: 1000;
     background: none;
-    border: 1.5px solid rgba(250,248,243,0.7);
-    border-radius: 50%;
+    border: none;
     padding: 0;
-    transition: border-color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    border-color: rgba(250,248,243,1);
 }
 
 .grape-icon {
@@ -339,7 +333,7 @@ main {
 
 .ci-sposiamo {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 22px;
+    font-size: 28px;
     color: #2d5016;
     font-style: italic;
     margin-bottom: 6px;
