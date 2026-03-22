@@ -17,6 +17,62 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, div, button, input, textarea, select, la
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* & in Times New Roman */
+.amp {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+/* Citazione hero */
+.hero-quote {
+    margin-top: 24px;
+    max-width: 500px;
+    border-left: 2px solid rgba(45,80,22,0.3);
+    padding: 10px 20px;
+    text-align: left;
+}
+.hero-quote p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #888;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Bollicine separatore menu */
+.menu-bubbles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-bubbles span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(250,248,243,0.35);
+}
+.menu-bubbles span:nth-child(3) {
+    width: 7px;
+    height: 7px;
+    background-color: rgba(250,248,243,0.5);
+}
+
+/* RSVP subtitle */
+.rsvp-subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #2d5016;
+    margin-bottom: 10px;
+    margin-top: -14px;
+}
+
 /* ===== BACKGROUND BUBBLES ===== */
 body::before {
     content: '';
