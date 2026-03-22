@@ -303,7 +303,7 @@ main {
     padding: 40px 20px 60px;
     background-image: url('Foto_Sposi1.jpg?v=2');
     background-size: cover;
-    background-position: center 12%;
+    background-position: center top;
     position: relative;
 }
 
@@ -330,7 +330,7 @@ main {
 
 @media (max-width: 768px) {
     .hero {
-        background-position: center 8%;
+        background-position: center top;
         justify-content: flex-end;
         padding-bottom: 50px;
     }
