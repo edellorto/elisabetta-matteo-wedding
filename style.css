@@ -17,10 +17,10 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, div, button, input, textarea, select, la
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* & in Times New Roman */
+/* & in Times New Roman NON corsivo */
 .amp {
     font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
+    font-style: normal;
 }
 
 /* Citazione hero */
@@ -304,7 +304,24 @@ main {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
-    background-color: #faf8f3;
+    background-image: url('Foto_Sposi.jpeg');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+
+/* Overlay scuro per leggibilità testo */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 248, 243, 0.72);
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -537,7 +554,11 @@ main {
 }
 
 .location-icon {
-    font-size: 36px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .location-tag {
