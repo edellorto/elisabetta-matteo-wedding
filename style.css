@@ -178,16 +178,16 @@ main {
 /* Bottiglia decorativa — immagine utente inclinata in basso a sinistra */
 .sidebar-bottle {
     position: absolute;
-    bottom: -20px;
-    left: -10px;
+    bottom: -10px;
+    left: -15px;
     pointer-events: none;
     z-index: 0;
 }
 
 .sidebar-bottle-img {
-    width: 180px;
-    opacity: 0.30;
-    transform: rotate(-30deg);
+    width: 190px;
+    opacity: 0.45;
+    transform: rotate(-28deg);
     transform-origin: bottom left;
     display: block;
 }
@@ -523,6 +523,13 @@ main {
     align-items: center;
     gap: 12px;
     transition: box-shadow 0.3s ease;
+    /* Allineamento perfetto: il bottone Maps va sempre in fondo */
+    justify-content: flex-start;
+}
+
+.location-item .btn-maps {
+    margin-top: auto;
+    padding-top: 12px;
 }
 
 .location-item:hover {
@@ -820,4 +827,42 @@ main {
     .story-photos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .divider-svg { width: 180px; height: 42px; }
     .rsvp iframe { height: 400px; }
+}
+
+/* ===== BOLLICINE DI SFONDO ===== */
+.bubble {
+    position: fixed;
+    bottom: -60px;
+    border-radius: 50%;
+    background: rgba(45, 80, 22, 0.12);
+    border: 1px solid rgba(45, 80, 22, 0.18);
+    animation: bubbleRise linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bubbleRise {
+    0%   { transform: translateY(0) scale(1);   opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 0.6; }
+    100% { transform: translateY(-110vh) scale(1.1); opacity: 0; }
+}
+
+/* ===== BOLLICINE SFONDO ===== */
+.bubble {
+    position: fixed;
+    bottom: -60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(45,80,22,0.16), rgba(45,80,22,0.04));
+    border: 1px solid rgba(45,80,22,0.13);
+    animation: bubbleRise linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bubbleRise {
+    0%   { transform: translateY(0) translateX(0);   opacity: 0; }
+    8%   { opacity: 0.9; }
+    92%  { opacity: 0.5; }
+    100% { transform: translateY(-105vh) translateX(18px); opacity: 0; }
 }
