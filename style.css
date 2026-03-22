@@ -27,16 +27,18 @@ h1, h2, h3, h4, h5, h6, p, a, span, li, div, button, input, textarea, select, la
 .hero-quote {
     margin-top: 24px;
     max-width: 500px;
-    border-left: 2px solid rgba(45,80,22,0.3);
     padding: 10px 20px;
-    text-align: left;
+    text-align: center;
+    border-top: 1px solid rgba(45,80,22,0.25);
+    border-bottom: 1px solid rgba(45,80,22,0.25);
 }
 .hero-quote p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    color: #888;
+    color: #444;
     font-style: italic;
     line-height: 1.7;
+    text-align: center;
 }
 
 /* Bollicine separatore menu */
@@ -333,11 +335,13 @@ main {
 
 .ci-sposiamo {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
-    color: #2d5016;
+    font-size: 40px;
+    color: #ffffff;
     font-style: italic;
+    font-weight: bold;
     margin-bottom: 6px;
     letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .hero .date {
@@ -834,7 +838,7 @@ main {
 @media (max-width: 768px) {
     .hero h1 { font-size: 48px; }
     .hero .date { font-size: 20px; }
-    .ci-sposiamo { font-size: 18px; }
+    .ci-sposiamo { font-size: 28px; }
 
     .story h2, .location h2, .registry h2, .rsvp h2 { font-size: 36px; }
     .story, .location, .registry, .rsvp { padding: 40px 20px; }
@@ -868,7 +872,7 @@ main {
 @media (max-width: 480px) {
     .hero h1 { font-size: 36px; }
     .hero .date { font-size: 16px; }
-    .ci-sposiamo { font-size: 15px; }
+    .ci-sposiamo { font-size: 24px; }
     .countdown { gap: 8px; padding: 12px 14px; }
     .countdown-number { font-size: 16px; }
     .story-photos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
