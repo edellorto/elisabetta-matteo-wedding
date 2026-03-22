@@ -290,7 +290,7 @@ main {
     padding: 40px 20px 60px;
     background-image: url('Foto_Sposi.jpeg');
     background-size: cover;
-    background-position: 35% 15%;
+    background-position: 30% 15%;
     position: relative;
 }
 
@@ -317,7 +317,7 @@ main {
 
 @media (max-width: 768px) {
     .hero {
-        background-position: 35% 10%;
+        background-position: 30% 10%;
         justify-content: flex-end;
         padding-bottom: 50px;
     }
@@ -736,20 +736,45 @@ main {
     box-shadow: 0 3px 14px rgba(0,0,0,0.08);
 }
 
-.rsvp-placeholder {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px;
-    border: 2px dashed rgba(45,80,22,0.3);
-    border-radius: 10px;
-    background: rgba(45,80,22,0.03);
+.rsvp-credits {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
-.rsvp-placeholder p {
+.rsvp-names {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #2d5016;
+    font-weight: 700;
+    margin: 0;
+}
+
+.rsvp-aka {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    color: #888;
+    color: #555;
     font-style: italic;
+    margin: 0;
+}
+
+.trademark {
+    font-style: normal;
+    font-size: 12px;
+    vertical-align: super;
+    margin-left: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rsvp-slogan {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #2d5016;
+    font-style: italic;
+    margin: 4px 0 0;
+    letter-spacing: 1px;
 }
 
 .btn-maps {
