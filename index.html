@@ -35,11 +35,15 @@
     <!-- Sidebar Menu -->
     <nav class="sidebar-menu" id="sidebarMenu">
         <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#story">STORIA</a></li>
-            <li><a href="#location">LOCATION</a></li>
-            <li><a href="#registry">LISTA NOZZE</a></li>
-            <li><a href="#rsvp">CONFERMA</a></li>
+            <li><a href="#home">Home</a></li>
+            <li class="menu-bubbles"><span></span><span></span><span></span><span></span><span></span></li>
+            <li><a href="#story">La Nostra Storia</a></li>
+            <li class="menu-bubbles"><span></span><span></span><span></span><span></span><span></span></li>
+            <li><a href="#location">Location</a></li>
+            <li class="menu-bubbles"><span></span><span></span><span></span><span></span><span></span></li>
+            <li><a href="#registry">Lista Nozze</a></li>
+            <li class="menu-bubbles"><span></span><span></span><span></span><span></span><span></span></li>
+            <li><a href="#rsvp">RSVP</a></li>
         </ul>
     </nav>
 
@@ -48,10 +52,13 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <h1>Elisabetta & Matteo</h1>
+            <h1>Elisabetta <span class="amp">&amp;</span> Matteo</h1>
             <p class="ci-sposiamo">Ci Sposiamo!</p>
             <p class="date">26 Settembre 2026</p>
             <p class="subtitle">Vi invitiamo a celebrare il nostro amore</p>
+            <blockquote class="hero-quote">
+                <p>— inserisci qui la vostra citazione —</p>
+            </blockquote>
             <div class="countdown">
                 <div class="countdown-item">
                     <span class="countdown-number" id="days">0</span>
@@ -101,131 +108,43 @@
 
         <!-- Divisore -->
         <div class="section-divider">
-            <div class="divider-line"></div>
+                        <div class="divider-line"></div>
             <div class="divider-art">
                 <svg viewBox="0 0 440 80" xmlns="http://www.w3.org/2000/svg" class="divider-svg">
-                    <!-- Flute sx -->
-                    <g transform="translate(65,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="14" cy="43" r="1.2" fill="#2d5016" opacity="0.35"/>
+                    <g transform="translate(62,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <!-- Grappolo centrale -->
-                    <g transform="translate(178,0)">
-                        <path d="M42 3 C42 3, 51 8, 49 15 C47 22, 42 20, 42 20 C42 20, 37 22, 35 15 C33 8, 42 3, 42 3Z" fill="#2d5016"/>
-                        <line x1="42" y1="20" x2="42" y2="25" stroke="#2d5016" stroke-width="1.8"/>
-                        <circle cx="36" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="30" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="54" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="36" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="63" r="6" fill="#2d5016"/>
+                    <g transform="translate(180,2)">
+                        <path d="M40 2 C40 2, 49 7, 47 14 C45 21, 40 19, 40 19 C40 19, 35 21, 33 14 C31 7, 40 2, 40 2Z" fill="#2d5016"/>
+                        <line x1="40" y1="19" x2="40" y2="24" stroke="#2d5016" stroke-width="1.8"/>
+                        <circle cx="34" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="28" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="52" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="34" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="62" r="6" fill="#2d5016"/>
                     </g>
-                    <!-- Flute dx -->
-                    <g transform="translate(315,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="14" cy="43" r="1.2" fill="#2d5016" opacity="0.35"/>
+                    <g transform="translate(316,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <line x1="0" y1="38" x2="100" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
-                    <line x1="340" y1="38" x2="440" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
-                </svg>
-            </div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- Story Section -->
-        <section id="story" class="story">
-            <h2>La nostra storia</h2>
-            <div class="story-text">
-                <p>Elisabetta e Matteo si sono incontrati per caso, ma il destino aveva altri piani.
-                Quello che è iniziato come una semplice amicizia si è trasformato in un amore profondo e sincero.</p>
-                <p>Dopo anni di momenti indimenticabili, risate, avventure e sogni condivisi,
-                Matteo ha deciso di fare il grande passo. Il 26 settembre 2026 sarà il giorno
-                in cui uniranno ufficialmente le loro vite davanti a chi amano di più.</p>
-            </div>
-            <!-- Griglia foto: segnaposto pronti -->
-            <div class="story-photos">
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <span class="photo-icon">📷</span>
-                        <p>Foto 1</p>
-                        <small>Il nostro primo incontro</small>
-                    </div>
-                </div>
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <span class="photo-icon">📷</span>
-                        <p>Foto 2</p>
-                        <small>Il nostro primo viaggio</small>
-                    </div>
-                </div>
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <span class="photo-icon">📷</span>
-                        <p>Foto 3</p>
-                        <small>La proposta</small>
-                    </div>
-                </div>
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <span class="photo-icon">📷</span>
-                        <p>Foto 4</p>
-                        <small>Fidanzati!</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Divisore -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-art">
-                <svg viewBox="0 0 440 80" xmlns="http://www.w3.org/2000/svg" class="divider-svg">
-                    <g transform="translate(65,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
-                    </g>
-                    <g transform="translate(178,0)">
-                        <path d="M42 3 C42 3, 51 8, 49 15 C47 22, 42 20, 42 20 C42 20, 37 22, 35 15 C33 8, 42 3, 42 3Z" fill="#2d5016"/>
-                        <line x1="42" y1="20" x2="42" y2="25" stroke="#2d5016" stroke-width="1.8"/>
-                        <circle cx="36" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="30" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="54" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="36" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="63" r="6" fill="#2d5016"/>
-                    </g>
-                    <g transform="translate(315,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
-                    </g>
-                    <line x1="0" y1="38" x2="100" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
-                    <line x1="340" y1="38" x2="440" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
+                    <line x1="0" y1="36" x2="96" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="344" y1="36" x2="440" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
                 </svg>
             </div>
             <div class="divider-line"></div>
@@ -236,7 +155,20 @@
             <h2>Location</h2>
             <div class="location-grid">
                 <div class="location-item">
-                    <div class="location-icon">⛪</div>
+                    <div class="location-icon">
+                        <!-- Chiesa stilizzata SVG -->
+                        <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="52" height="60">
+                            <rect x="5" y="28" width="50" height="38" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <polygon points="30,4 5,28 55,28" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <rect x="26" y="4" width="8" height="10" fill="none" stroke="#2d5016" stroke-width="1.5"/>
+                            <line x1="30" y1="0" x2="30" y2="14" stroke="#2d5016" stroke-width="1.8"/>
+                            <line x1="25" y1="6" x2="35" y2="6" stroke="#2d5016" stroke-width="1.8"/>
+                            <rect x="22" y="44" width="16" height="22" fill="none" stroke="#2d5016" stroke-width="1.5"/>
+                            <path d="M22,44 Q30,38 38,44" fill="none" stroke="#2d5016" stroke-width="1.5"/>
+                            <rect x="10" y="34" width="10" height="12" fill="none" stroke="#2d5016" stroke-width="1.2"/>
+                            <rect x="40" y="34" width="10" height="12" fill="none" stroke="#2d5016" stroke-width="1.2"/>
+                        </svg>
+                    </div>
                     <div class="location-tag">Cerimonia</div>
                     <h3>Chiesa Parrocchiale<br>di San Paolo Apostolo</h3>
                     <div class="location-details">
@@ -247,7 +179,21 @@
                 </div>
                 <div class="location-divider-v"></div>
                 <div class="location-item">
-                    <div class="location-icon">🥂</div>
+                    <div class="location-icon">
+                        <!-- Calice champagne stilizzato SVG -->
+                        <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg" width="52" height="60">
+                            <path d="M15,4 Q15,32 30,38 Q45,32 45,4 Z" fill="none" stroke="#2d5016" stroke-width="2"/>
+                            <line x1="30" y1="38" x2="30" y2="56" stroke="#2d5016" stroke-width="2"/>
+                            <line x1="18" y1="56" x2="42" y2="56" stroke="#2d5016" stroke-width="2"/>
+                            <line x1="22" y1="62" x2="38" y2="62" stroke="#2d5016" stroke-width="1.5"/>
+                            <ellipse cx="30" cy="12" rx="11" ry="3" fill="rgba(45,80,22,0.12)"/>
+                            <circle cx="22" cy="20" r="1.5" fill="#2d5016" opacity="0.5"/>
+                            <circle cx="30" cy="26" r="1.5" fill="#2d5016" opacity="0.5"/>
+                            <circle cx="37" cy="18" r="1.5" fill="#2d5016" opacity="0.4"/>
+                            <circle cx="26" cy="30" r="1" fill="#2d5016" opacity="0.35"/>
+                            <circle cx="34" cy="30" r="1" fill="#2d5016" opacity="0.35"/>
+                        </svg>
+                    </div>
                     <div class="location-tag">Ricevimento</div>
                     <h3>Bersi Serlini<br>Franciacorta</h3>
                     <div class="location-details">
@@ -261,41 +207,43 @@
 
         <!-- Divisore -->
         <div class="section-divider">
-            <div class="divider-line"></div>
+                        <div class="divider-line"></div>
             <div class="divider-art">
                 <svg viewBox="0 0 440 80" xmlns="http://www.w3.org/2000/svg" class="divider-svg">
-                    <g transform="translate(65,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
+                    <g transform="translate(62,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <g transform="translate(178,0)">
-                        <path d="M42 3 C42 3, 51 8, 49 15 C47 22, 42 20, 42 20 C42 20, 37 22, 35 15 C33 8, 42 3, 42 3Z" fill="#2d5016"/>
-                        <line x1="42" y1="20" x2="42" y2="25" stroke="#2d5016" stroke-width="1.8"/>
-                        <circle cx="36" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="30" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="54" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="36" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="63" r="6" fill="#2d5016"/>
+                    <g transform="translate(180,2)">
+                        <path d="M40 2 C40 2, 49 7, 47 14 C45 21, 40 19, 40 19 C40 19, 35 21, 33 14 C31 7, 40 2, 40 2Z" fill="#2d5016"/>
+                        <line x1="40" y1="19" x2="40" y2="24" stroke="#2d5016" stroke-width="1.8"/>
+                        <circle cx="34" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="28" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="52" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="34" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="62" r="6" fill="#2d5016"/>
                     </g>
-                    <g transform="translate(315,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
+                    <g transform="translate(316,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <line x1="0" y1="38" x2="100" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
-                    <line x1="340" y1="38" x2="440" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
+                    <line x1="0" y1="36" x2="96" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="344" y1="36" x2="440" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
                 </svg>
             </div>
             <div class="divider-line"></div>
@@ -305,7 +253,8 @@
         <section id="registry" class="registry">
             <h2>Lista Nozze</h2>
             <p class="registry-intro">La vostra presenza è il regalo più importante per noi.<br>
-            Se desiderate farci un dono, potete contribuire con un bonifico bancario.</p>
+            Qualora desideraste farci un dono, ci rendereste felici contribuendo al nostro viaggio di nozze!<br>
+            Grazie di cuore!</p>
             <div class="registry-box">
                 <div class="registry-grape">
                     <svg viewBox="0 0 60 76" xmlns="http://www.w3.org/2000/svg" width="50" height="65">
@@ -321,7 +270,7 @@
                         <circle cx="30" cy="65" r="6.5" fill="#2d5016"/>
                     </svg>
                 </div>
-                <h3>Contributo con Bonifico</h3>
+                <h3>IBAN</h3>
                 <div class="iban-block">
                     <div class="iban-row">
                         <span class="iban-label">Intestato a</span>
@@ -333,7 +282,7 @@
                     </div>
                     <div class="iban-row">
                         <span class="iban-label">Causale</span>
-                        <span class="iban-value">Regalo matrimonio Elisabetta & Matteo</span>
+                        <span class="iban-value">Regalo nozze EliTeo (Nome del mittente)</span>
                     </div>
                 </div>
                 <p class="registry-note">Per qualsiasi domanda scriveteci tramite il modulo di conferma 💚</p>
@@ -342,41 +291,43 @@
 
         <!-- Divisore -->
         <div class="section-divider">
-            <div class="divider-line"></div>
+                        <div class="divider-line"></div>
             <div class="divider-art">
                 <svg viewBox="0 0 440 80" xmlns="http://www.w3.org/2000/svg" class="divider-svg">
-                    <g transform="translate(65,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
+                    <g transform="translate(62,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <g transform="translate(178,0)">
-                        <path d="M42 3 C42 3, 51 8, 49 15 C47 22, 42 20, 42 20 C42 20, 37 22, 35 15 C33 8, 42 3, 42 3Z" fill="#2d5016"/>
-                        <line x1="42" y1="20" x2="42" y2="25" stroke="#2d5016" stroke-width="1.8"/>
-                        <circle cx="36" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="30" r="6" fill="#2d5016"/>
-                        <circle cx="30" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="54" cy="41" r="6" fill="#2d5016"/>
-                        <circle cx="36" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="48" cy="52" r="6" fill="#2d5016"/>
-                        <circle cx="42" cy="63" r="6" fill="#2d5016"/>
+                    <g transform="translate(180,2)">
+                        <path d="M40 2 C40 2, 49 7, 47 14 C45 21, 40 19, 40 19 C40 19, 35 21, 33 14 C31 7, 40 2, 40 2Z" fill="#2d5016"/>
+                        <line x1="40" y1="19" x2="40" y2="24" stroke="#2d5016" stroke-width="1.8"/>
+                        <circle cx="34" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="29" r="6" fill="#2d5016"/>
+                        <circle cx="28" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="52" cy="40" r="6" fill="#2d5016"/>
+                        <circle cx="34" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="46" cy="51" r="6" fill="#2d5016"/>
+                        <circle cx="40" cy="62" r="6" fill="#2d5016"/>
                     </g>
-                    <g transform="translate(315,4)">
-                        <polygon points="10,0 20,0 17,52 13,52" fill="none" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="13" y1="52" x2="5" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="17" y1="52" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <line x1="5" y1="68" x2="25" y2="68" stroke="#2d5016" stroke-width="1.3"/>
-                        <ellipse cx="15" cy="10" rx="5" ry="2.5" fill="rgba(45,80,22,0.15)"/>
-                        <circle cx="13" cy="22" r="1.2" fill="#2d5016" opacity="0.45"/>
-                        <circle cx="16" cy="33" r="1.2" fill="#2d5016" opacity="0.45"/>
+                    <g transform="translate(316,2)">
+                        <path d="M8,2 Q8,28 20,34 Q32,28 32,2 Z" fill="rgba(45,80,22,0.08)" stroke="#2d5016" stroke-width="1.4"/>
+                        <line x1="20" y1="34" x2="20" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="10" y1="52" x2="30" y2="52" stroke="#2d5016" stroke-width="1.6"/>
+                        <line x1="13" y1="58" x2="27" y2="58" stroke="#2d5016" stroke-width="1.3"/>
+                        <ellipse cx="20" cy="10" rx="9" ry="2.5" fill="rgba(45,80,22,0.15)"/>
+                        <circle cx="14" cy="18" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="20" cy="24" r="1.3" fill="#2d5016" opacity="0.4"/>
+                        <circle cx="26" cy="16" r="1.1" fill="#2d5016" opacity="0.35"/>
                     </g>
-                    <line x1="0" y1="38" x2="100" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
-                    <line x1="340" y1="38" x2="440" y2="38" stroke="#2d5016" stroke-width="0.8" opacity="0.35"/>
+                    <line x1="0" y1="36" x2="96" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
+                    <line x1="344" y1="36" x2="440" y2="36" stroke="#2d5016" stroke-width="0.8" opacity="0.3"/>
                 </svg>
             </div>
             <div class="divider-line"></div>
@@ -384,9 +335,9 @@
 
         <!-- RSVP Section -->
         <section id="rsvp" class="rsvp">
-            <h2>Conferma Partecipazione</h2>
-            <p>Vi preghiamo di confermare la vostra partecipazione entro il <strong>31 agosto 2026</strong></p>
-            <!-- ⬇️ Sostituisci l'URL con il tuo link Google Form -->
+            <h2>Ci Sarai?</h2>
+            <p class="rsvp-subtitle">RSVP</p>
+            <p>Vi preghiamo di confermare la vostra partecipazione entro il <strong>5 settembre 2026</strong></p>
             <iframe src="INSERISCI_QUI_IL_LINK_GOOGLE_FORM" title="RSVP Form" loading="lazy"></iframe>
         </section>
 
