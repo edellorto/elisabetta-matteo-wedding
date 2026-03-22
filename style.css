@@ -301,9 +301,9 @@ main {
     align-items: center;
     text-align: center;
     padding: 40px 20px 60px;
-    background-image: url('Foto_Sposi.jpeg');
+    background-image: url('Foto_Sposi1.jpg');
     background-size: cover;
-    background-position: 30% 15%;
+    background-position: center 12%;
     position: relative;
 }
 
@@ -330,7 +330,7 @@ main {
 
 @media (max-width: 768px) {
     .hero {
-        background-position: 30% 10%;
+        background-position: center 8%;
         justify-content: flex-end;
         padding-bottom: 50px;
     }
