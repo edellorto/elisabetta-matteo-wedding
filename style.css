@@ -176,22 +176,6 @@ main {
 }
 
 /* Bottiglia decorativa — immagine utente inclinata in basso a sinistra */
-.sidebar-bottle {
-    position: absolute;
-    bottom: -10px;
-    left: -15px;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.sidebar-bottle-img {
-    width: 190px;
-    opacity: 0.45;
-    transform: rotate(-28deg);
-    transform-origin: bottom left;
-    display: block;
-}
-
 .sidebar-menu ul {
     list-style: none;
     padding: 0;
@@ -306,7 +290,7 @@ main {
     padding: 40px 20px 60px;
     background-image: url('Foto_Sposi.jpeg');
     background-size: cover;
-    background-position: center 15%;
+    background-position: 42% 15%;
     position: relative;
 }
 
@@ -333,7 +317,7 @@ main {
 
 @media (max-width: 768px) {
     .hero {
-        background-position: center 10%;
+        background-position: 42% 10%;
         justify-content: flex-end;
         padding-bottom: 50px;
     }
