@@ -741,7 +741,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 2px;
 }
 
 .rsvp-names {
@@ -750,14 +750,16 @@ main {
     color: #2d5016;
     font-weight: 700;
     margin: 0;
+    line-height: 1.1;
 }
 
 .rsvp-aka {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
     font-style: italic;
     margin: 0;
+    line-height: 1.2;
 }
 
 .trademark {
@@ -773,7 +775,7 @@ main {
     font-size: 18px;
     color: #2d5016;
     font-style: italic;
-    margin: 4px 0 0;
+    margin: 10px 0 0;
     letter-spacing: 1px;
 }
 
