@@ -46,7 +46,25 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ===== SMOOTH SCROLLING =====
+// ===== BOLLICINE DI SFONDO =====
+function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    const size = Math.random() * 18 + 6; // 6-24px
+    bubble.style.width  = size + 'px';
+    bubble.style.height = size + 'px';
+    bubble.style.left   = Math.random() * 100 + 'vw';
+    const duration = Math.random() * 10 + 8; // 8-18s
+    bubble.style.animationDuration = duration + 's';
+    bubble.style.animationDelay    = Math.random() * 4 + 's';
+    document.body.appendChild(bubble);
+    setTimeout(() => bubble.remove(), (duration + 4) * 1000);
+}
+
+// Crea una bollicina ogni 1.2 secondi
+setInterval(createBubble, 1200);
+// Crea subito alcune bollicine sparse
+for (let i = 0; i < 8; i++) setTimeout(createBubble, i * 400);
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
