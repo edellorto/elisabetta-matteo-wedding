@@ -168,7 +168,7 @@ main { position: relative; z-index: 1; }
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    padding: 40px 20px 200px;
+    padding: 40px 20px 220px;
     background-image: url('Foto_Sposi1.jpg?v=2');
     background-size: cover;
     background-position: center top;
@@ -176,17 +176,7 @@ main { position: relative; z-index: 1; }
 }
 
 /* Sfocatura leggera sulla parte alta */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 55%;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    background: rgba(250,248,243,0.12);
-    z-index: 0;
-    pointer-events: none;
-}
+
 
 /* Gradiente: trasparente in alto, bianco crema in basso */
 .hero::before {
@@ -196,10 +186,10 @@ main { position: relative; z-index: 1; }
     background: linear-gradient(
         to bottom,
         rgba(250,248,243,0.0)  0%,
-        rgba(250,248,243,0.0)  48%,
-        rgba(250,248,243,0.70) 63%,
-        rgba(250,248,243,0.95) 76%,
-        rgba(250,248,243,1.00) 88%
+        rgba(250,248,243,0.0)  58%,
+        rgba(250,248,243,0.80) 70%,
+        rgba(250,248,243,0.97) 82%,
+        rgba(250,248,243,1.00) 92%
     );
     z-index: 0;
 }
@@ -832,4 +822,253 @@ main { position: relative; z-index: 1; }
     .countdown-number { font-size: 16px; }
     .story-photos { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .divider-svg { width: 180px; height: 42px; }
+}
+
+/* ===== BOLLE ANIMATE DI SFONDO ===== */
+.bubbles-container {
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(45,80,22,0.18), rgba(45,80,22,0.06));
+    border: 1px solid rgba(45,80,22,0.12);
+    animation: bubbleRise linear infinite;
+}
+
+.bubble:nth-child(1)  { left: 5%;   width: 18px; height: 18px; animation-duration: 12s; animation-delay: 0s;   }
+.bubble:nth-child(2)  { left: 12%;  width: 10px; height: 10px; animation-duration: 9s;  animation-delay: 2s;   }
+.bubble:nth-child(3)  { left: 22%;  width: 24px; height: 24px; animation-duration: 14s; animation-delay: 1s;   }
+.bubble:nth-child(4)  { left: 33%;  width: 8px;  height: 8px;  animation-duration: 8s;  animation-delay: 3.5s; }
+.bubble:nth-child(5)  { left: 44%;  width: 16px; height: 16px; animation-duration: 11s; animation-delay: 0.5s; }
+.bubble:nth-child(6)  { left: 55%;  width: 12px; height: 12px; animation-duration: 10s; animation-delay: 4s;   }
+.bubble:nth-child(7)  { left: 63%;  width: 20px; height: 20px; animation-duration: 13s; animation-delay: 1.5s; }
+.bubble:nth-child(8)  { left: 73%;  width: 9px;  height: 9px;  animation-duration: 7s;  animation-delay: 2.5s; }
+.bubble:nth-child(9)  { left: 82%;  width: 22px; height: 22px; animation-duration: 15s; animation-delay: 0s;   }
+.bubble:nth-child(10) { left: 91%;  width: 14px; height: 14px; animation-duration: 9s;  animation-delay: 3s;   }
+.bubble:nth-child(11) { left: 8%;   width: 7px;  height: 7px;  animation-duration: 6s;  animation-delay: 5s;   }
+.bubble:nth-child(12) { left: 48%;  width: 28px; height: 28px; animation-duration: 16s; animation-delay: 2s;   }
+.bubble:nth-child(13) { left: 68%;  width: 11px; height: 11px; animation-duration: 8s;  animation-delay: 6s;   }
+.bubble:nth-child(14) { left: 38%;  width: 6px;  height: 6px;  animation-duration: 7s;  animation-delay: 1s;   }
+.bubble:nth-child(15) { left: 78%;  width: 16px; height: 16px; animation-duration: 11s; animation-delay: 4.5s; }
+
+@keyframes bubbleRise {
+    0%   { transform: translateY(0) translateX(0) scale(1);   opacity: 0; }
+    10%  { opacity: 1; }
+    50%  { transform: translateY(-50vh) translateX(15px) scale(1.05); }
+    90%  { opacity: 0.6; }
+    100% { transform: translateY(-105vh) translateX(-10px) scale(0.9); opacity: 0; }
+}
+
+/* ===== COUNTDOWN ANIMATO ===== */
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin-top: 28px;
+    border: 1.5px solid var(--green-dark);
+    padding: 18px 32px;
+    border-radius: 40px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 20px var(--shadow-green);
+}
+
+.countdown-number {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--green-dark);
+    line-height: 1;
+    display: inline-block;
+    animation: pulse-number 1s ease-in-out infinite;
+    min-width: 40px;
+    text-align: center;
+}
+
+@keyframes pulse-number {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.06); color: var(--green-mid); }
+}
+
+/* Ogni numero ha un delay diverso */
+#seconds { animation-delay: 0s; }
+#minutes { animation-delay: 0.25s; }
+#hours   { animation-delay: 0.5s; }
+#days    { animation-delay: 0s; animation: none; } /* giorni non pulsano */
+
+/* ===== TITOLI CON OMBRA E STILE ===== */
+.story h2, .location h2, .registry h2, .rsvp h2 {
+    text-shadow: 0 2px 8px rgba(45,80,22,0.15), 0 1px 0 rgba(255,255,255,0.8);
+    position: relative;
+}
+
+/* ===== SEZIONE STORIA: fade-in al caricamento ===== */
+.story-text p {
+    animation: fadeInUp 0.8s ease both;
+}
+.story-text p:nth-child(2) { animation-delay: 0.15s; }
+.story-text p:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== LOCATION CARD: ingresso animato ===== */
+.location-item {
+    animation: fadeInUp 0.7s ease both;
+}
+.location-item:nth-child(1) { animation-delay: 0.1s; }
+.location-item:nth-child(3) { animation-delay: 0.25s; }
+
+/* ===== HERO TITOLO: animazione ingresso ===== */
+.hero h1 {
+    animation: heroEntrance 1s ease both;
+}
+.ci-sposiamo { animation: heroEntrance 1s ease 0.2s both; }
+.hero .date   { animation: heroEntrance 1s ease 0.35s both; }
+.hero-quote   { animation: heroEntrance 1s ease 0.5s both; }
+.countdown    { animation: heroEntrance 1s ease 0.65s both; }
+
+@keyframes heroEntrance {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== DIVISORI PIÙ RICCHI ===== */
+.section-divider {
+    padding: 16px 20px;
+    background: linear-gradient(to right, transparent, rgba(45,80,22,0.04), transparent);
+}
+
+/* ===== REGISTRY BOX: brilla on hover ===== */
+.registry-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.registry-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.25), 0 2px 8px var(--shadow-green);
+}
+
+/* ===== RSVP: linea dorata sotto il bottone ===== */
+.btn-rsvp {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-dark) 100%);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+
+/* ===== BOLLICINE NEI FLUTE ===== */
+@keyframes fluteBubble {
+    0%   { transform: translateY(0) scale(1);   opacity: 0.9; }
+    50%  { transform: translateY(-8px) scale(1.1); opacity: 0.7; }
+    100% { transform: translateY(-16px) scale(0.6); opacity: 0; }
+}
+
+.fb1 { animation: fluteBubble 2.2s ease-in-out infinite; animation-delay: 0s;    }
+.fb2 { animation: fluteBubble 2.2s ease-in-out infinite; animation-delay: 0.4s;  }
+.fb3 { animation: fluteBubble 2.2s ease-in-out infinite; animation-delay: 0.8s;  }
+.fb4 { animation: fluteBubble 2.2s ease-in-out infinite; animation-delay: 1.2s;  }
+.fb5 { animation: fluteBubble 2.2s ease-in-out infinite; animation-delay: 1.6s;  }
+
+/* ===== COUNTDOWN BORDER PULSANTE ===== */
+@keyframes countdownPulse {
+    0%, 100% {
+        border-color: rgba(45,80,22,0.5);
+        box-shadow: 0 4px 20px rgba(45,80,22,0.15);
+    }
+    50% {
+        border-color: rgba(45,80,22,1);
+        box-shadow: 0 0 0 4px rgba(45,80,22,0.1), 0 4px 20px rgba(45,80,22,0.3);
+    }
+}
+
+.countdown {
+    animation: countdownPulse 2s ease-in-out infinite !important;
+    border-width: 2px !important;
+}
+
+/* ===== SFONDO ANIMATO CON GRADIENTE MESH ===== */
+body {
+    background: var(--cream);
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(45,80,22,0.07) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 10%, rgba(201,168,76,0.06) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 80%, rgba(45,80,22,0.05) 0%, transparent 55%),
+        radial-gradient(ellipse at 90% 60%, rgba(201,168,76,0.05) 0%, transparent 40%),
+        radial-gradient(ellipse at 10% 70%, rgba(45,80,22,0.04) 0%, transparent 40%);
+    animation: bgShift 12s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bgShift {
+    0%   { opacity: 1; transform: scale(1) rotate(0deg); }
+    50%  { opacity: 0.7; transform: scale(1.05) rotate(1deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* ===== BOLLE PIÙ VIVACI ===== */
+.bubble {
+    background: radial-gradient(circle at 30% 30%,
+        rgba(201,168,76,0.2),
+        rgba(45,80,22,0.08));
+    border: 1px solid rgba(201,168,76,0.25);
+}
+
+.bubble:nth-child(odd) {
+    background: radial-gradient(circle at 30% 30%,
+        rgba(45,80,22,0.15),
+        rgba(45,80,22,0.04));
+    border: 1px solid rgba(45,80,22,0.15);
+}
+
+/* bolle extra grandi lente */
+.bubble:nth-child(12) {
+    background: radial-gradient(circle at 35% 35%, rgba(201,168,76,0.18), transparent);
+    border: 1.5px solid rgba(201,168,76,0.2);
+}
+
+/* ===== SEZIONI: bordo superiore colorato ===== */
+.story::before, .location::before, .registry::before, .rsvp::before {
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--green-dark) 20%,
+        var(--gold) 50%,
+        var(--green-dark) 80%,
+        transparent 100%);
+    animation: borderGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+    0%   { opacity: 0.6; }
+    100% { opacity: 1; filter: brightness(1.3); }
+}
+
+/* ===== TITOLI: shimmer sul hover ===== */
+.story h2:hover, .location h2:hover, .registry h2:hover, .rsvp h2:hover {
+    color: var(--green-mid);
+    transition: color 0.3s ease;
 }
