@@ -222,17 +222,16 @@ main { position: relative; z-index: 1; }
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    padding: 40px 20px 220px;
+    padding: 40px 20px 60px;
+    background-color: var(--cream);
     background-image: url('Foto_Sposi1.jpg?v=2');
-    background-size: cover;
+    background-size: 100% 55%;
+    background-repeat: no-repeat;
     background-position: center top;
     position: relative;
 }
 
-/* Sfocatura leggera sulla parte alta */
-
-
-/* Gradiente: trasparente in alto, bianco crema in basso */
+/* Sfumatura: foto nitida in alto, si dissolve a metà pagina lasciando sfondo crema */
 .hero::before {
     content: '';
     position: absolute;
@@ -240,10 +239,10 @@ main { position: relative; z-index: 1; }
     background: linear-gradient(
         to bottom,
         rgba(250,248,243,0.0)  0%,
-        rgba(250,248,243,0.0)  58%,
-        rgba(250,248,243,0.80) 70%,
-        rgba(250,248,243,0.97) 82%,
-        rgba(250,248,243,1.00) 92%
+        rgba(250,248,243,0.0)  28%,
+        rgba(250,248,243,0.55) 42%,
+        rgba(250,248,243,0.88) 52%,
+        rgba(250,248,243,1.00) 60%
     );
     z-index: 0;
 }
@@ -867,7 +866,7 @@ main { position: relative; z-index: 1; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .hero { background-position: center top; justify-content: flex-end; padding-bottom: 100px; }
+    .hero { background-size: 100% 50%; background-position: center top; justify-content: flex-end; padding-bottom: 50px; }
     .hero h1 { font-size: 48px; }
     .hero .date { font-size: 20px; }
     .ci-sposiamo { font-size: 18px; }
