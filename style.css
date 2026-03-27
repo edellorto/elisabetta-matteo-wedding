@@ -238,11 +238,11 @@ main { position: relative; z-index: 1; }
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(250,248,243,0.0)  50%,
-        rgba(250,248,243,0.0)  60%,
-        rgba(250,248,243,0.55) 65%,
-        rgba(250,248,243,0.88) 70%,
-        rgba(250,248,243,1.00) 70%
+        rgba(250,248,243,0.0)  25%,
+        rgba(250,248,243,0.0)  30%,
+        rgba(250,248,243,0.55) 40%,
+        rgba(250,248,243,0.88) 50%,
+        rgba(250,248,243,1.00) 60%
     );
     z-index: 0;
 }
@@ -263,7 +263,7 @@ main { position: relative; z-index: 1; }
 .ci-sposiamo {
     font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
-    color: #fff;
+    color: #666;
     font-style: italic;
     font-weight: normal;
     margin-bottom: 6px;
